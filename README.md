@@ -5,8 +5,8 @@
 ### HTML
 Le HTML nous servira à construire le squelette de notre application.
 A retenir :
-- La balise <div> pour les blocs
-- La balise <span> pour le texte
+- La balise `<div>` pour les blocs
+- La balise `<span>` pour le texte
 
 Pour approfondir : 
 - https://developer.mozilla.org/en-US/docs/Web/HTML
