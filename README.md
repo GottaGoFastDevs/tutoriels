@@ -1,26 +1,39 @@
 # tutoriels
 
+Ce dépôt a pour but de vous faire sentir capable de réaliser une appli même si vous ne comprenez pas tous les principes qui sont autour (ça viendra avec le temps).__
+Si vous voulez quand même savoir où vous mettez les pieds, consultez les liens suivant :__
+- [Web Architecture 101](https://engineering.videoblocks.com/web-architecture-101-a3224e126947)
+- [The System Design Primer](https://github.com/donnemartin/system-design-primer)
+
 ## Objectif : Réaliser des applications grâce à un framework (React ou Vue)
 
 ### HTML
-Le HTML nous servira à construire le squelette de notre application.
+Le HTML nous servira à construire le squelette de notre application.__
 A retenir :
+- [la base](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
 - La balise `<div>` pour les blocs
 - La balise `<span>` pour le texte
 
 Pour approfondir : 
 - https://developer.mozilla.org/en-US/docs/Web/HTML
 
+Exemples :
+- 
+
 ### CSS
-Le CSS nous servira à personnaliser notre squelette html.
+Le CSS nous servira à personnaliser notre squelette html.__
 A retenir :
 - Tout est personnalisable comme on le veut, l'important est de savoir googler (background color in css)
-- Le système de flexbox qui permet de réaliser tout ce qui est position - (https://flexboxfroggy.com/#fr)
-- Essayer de respecter la charte material design - (https://material.io/components)
-- Comprendre comment réaliser un design responsive en respectant le principe des 12 colonnes - (https://material.io/design/layout/responsive-layout-grid.html#columns-gutters-and-margins)
+- [Le système de flexbox qui permet de réaliser tout ce qui est position](https://flexboxfroggy.com/#fr)
+- [Charte material design](https://material.io/components)
+- [Le principe des 12 colonnes pour un design responsive](https://material.io/design/layout/responsive-layout-grid.html#columns-gutters-and-margins)
 
 Pour approfondir :
 - https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics
+- https://www.w3.org/Style/Examples/011/firstcss.fr.html
+
+Exemples :
+- [w3schools.com - Example Website](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_example_website)
 
 ### JS
 Le javascript va nous permettre de donner vie à notre squelette.
