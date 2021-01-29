@@ -35,7 +35,7 @@ Pour approfondir :
 #### Exercice intermédiaire
 Réaliser une page web statique (index.html) qui devra lire un fichier json (posts.json). 
 Le fichier posts.json sera une liste de post avec les attributs (title, content, createdAt, author).
-La page web devra faire une liste de ces posts sous forme de card de façon responsive. 
+La page web devra faire une liste de ces posts sous forme de card (https://material.io/components/cards) de façon responsive. 
 C'est à dire qu'en petit écran (xs) les cards seront afficher en ligne et devront faire 12 colonnes, en sm 4, et en md 3.
 Ajouter un système de favoris sur les cards (juste visuel)
 
