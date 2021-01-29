@@ -39,16 +39,19 @@ Le javascript va nous permettre de donner vie à notre squelette.<br />
 A retenir :
 - Les méthodes des arrays (map, reduce, forEach, filter)
 - La déstructuration pour éviter de se casser le cul avec la position des arguments (a(b, c) vs a({b, c}))
-- Comprendre pourquoi var a = 1; {a} est équivalent à {a: a} (Je sais plus comment ça s'appelle)
+- shorthand properties - var a = 1; {a} <=> {a: a}
 - Syntaxe de décomposition - ({...tonObjet})
+- [Javascript guidelines from MDN](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/JavaScript)
+- [Coding style airbnb](https://github.com/airbnb/javascript#types) - Réglé automatiquement avec un linter et un formatter (Eslint + Prettier)
 
 Pour approfondir : 
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript (Ne pas perdre du temps dans la catégorie Built-in objects, juste regarder Array, JSON, map)
 
 Examples :
-- 
+- [w3schools.com - JavaScript Examples](https://www.w3schools.com/js/js_examples.asp)
 
-#### Exercice intermédiaire
+
+### Exercice intermédiaire n°1
 Réaliser une page web statique (index.html) qui devra lire un fichier json (posts.json).<br /> 
 Le fichier posts.json sera une liste de post avec les attributs (title, content, createdAt, author).<br />
 La page web devra faire une liste de ces posts sous forme de `card` (https://material.io/components/cards) de façon responsive. 
@@ -60,3 +63,8 @@ Ressources :
 - Comment utiliser les breakpoints en css : https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp
 - Utiliser des données JSON : https://developer.mozilla.org/fr/docs/Learn/JavaScript/Objects/JSON
 - Faire une card en CSS : https://www.w3schools.com/howto/howto_css_cards.asp | Rechercher sur internet
+
+### VueJs
+Coming soon...
+### React
+Coming soon...
