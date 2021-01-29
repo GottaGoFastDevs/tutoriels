@@ -16,7 +16,7 @@ Pour approfondir :
 - https://developer.mozilla.org/en-US/docs/Web/HTML
 
 Exemples :
-- 
+- [html sandbox](https://codesandbox.io/s/ywx8834xrj)
 
 ### CSS
 Le CSS nous servira à personnaliser notre squelette html.<br />
@@ -32,6 +32,7 @@ Pour approfondir :
 
 Exemples :
 - [w3schools.com - Example Website](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_example_website)
+- [Asperion HTML5](https://codepen.io/alexdevero/pen/GCirD)
 
 ### JS
 Le javascript va nous permettre de donner vie à notre squelette.<br />
@@ -39,9 +40,13 @@ A retenir :
 - Les méthodes des arrays (map, reduce, forEach, filter)
 - La déstructuration pour éviter de se casser le cul avec la position des arguments (a(b, c) vs a({b, c}))
 - Comprendre pourquoi var a = 1; {a} est équivalent à {a: a} (Je sais plus comment ça s'appelle)
+- Syntaxe de décomposition - ({...tonObjet})
 
 Pour approfondir : 
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript (Ne pas perdre du temps dans la catégorie Built-in objects, juste regarder Array, JSON, map)
+
+Examples :
+- 
 
 #### Exercice intermédiaire
 Réaliser une page web statique (index.html) qui devra lire un fichier json (posts.json).<br /> 
