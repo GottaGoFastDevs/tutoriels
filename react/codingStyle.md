@@ -57,6 +57,8 @@ export default App
 Les layouts sont des composants qui englobe d'autres composants d'un point de vue visuel. Généralement on y retrouve des fichiers regroupants des barres de navigation et pied de page.
 
 ```jsx
+// layouts/Default.js
+
 function Default() {
     return (
         <>
@@ -73,3 +75,96 @@ export default Default
 Dans cet exemple, tous les composants qui seront mis à l'intérieur de ce layout auront le composant AppBar au dessus d'eux.
 
 
+### Views
+Les views sont des composants qui seront utilisés dans le fichier App.js pour décrire la navigation de l'application grâce *react-router-dom*.<br>
+Il faut essayer de mettre le plus de petits composants dans le même fichier sans à avoir à créer des composants annexes. Cependant, si le composant est très grand en terme de logique ou de ligne alors il ne faut pas hésiter à créer un composant annexe. <br>
+```jsx
+import BigComponent from "../components/view1/bigComponent"
+function ShortComponent1() {
+    return (
+        <div> I am the component 1</div>
+    )
+}
+function View1() {
+    return (
+        <div>Je suis la vue View1</div>
+        <ShortComponent1 />
+        <BigComponent />
+    )
+}
+export default View1
+```
+
+#### Attention
+L'arborescence de votre dossier *views* doit respecter l'architecture de vos routes de navigation.
+
+Une navigation du style
+```
+'\'
+'\posts' 
+'\posts\:postId'
+
+```
+Donnera une arborescence comme ça
+```
+views
+|   index.js
+|___posts
+    |   index.js
+    |   _postId.js
+```
+[Cliquez ici pour plus de détails](https://fr.nuxtjs.org/docs/2.x/features/file-system-routing)
+
+
+### Components
+Il faut ranger les composants par catégories (par vue, fields, button...).
+
+## Autres
+### Import des composants de Material UI
+```jsx
+import {
+  Grid,
+  Button,
+  TextField,
+  Rating,
+  Typography,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  Checkbox,
+  FormGroup,
+  FormControlLabel,
+  IconButton,
+} from "@material-ui/core"
+```
+
+### Import du makeStyle de MaterialUI
+```jsx
+import { makeStyles } from "@material-ui/core/styles"
+```
+
+### Manipulation de l'état dans React
+```jsx
+import { useState } from "react"
+
+function IncrementButton({value, onChange}) {
+    function handleChange(newValue) {
+        onChange(newValue)
+    }
+    function incrementValue() {
+        handleChange(value++)
+    }
+
+    return (
+        <Button onClick={incrementValue}>+</Button>
+    )
+}
+
+function MyPage() {
+    // Always provide a value
+    const [counter, setCounter] = useState(0)
+    return (
+        <IncrementButton value={counter} onChange={setCounter}>
+    )
+}
+```
