@@ -144,6 +144,8 @@ import { makeStyles } from "@material-ui/core/styles"
 ```
 
 ### Manipulation de l'état dans React
+En React, il faut réfléchir. Et ça se traduit par une meilleure traduction de qui détient l'état d'un objet. C'est la grande difficulté en React. Quel est le composant qui doit détenir l'état d'un objet.<br>
+Dans l'exemple ci-dessous, la page est composé de son corps ainsi que d'un bouton. La bonne pratique est de se demander qui mérite de connaître l'état d'un objet en premier. Ici c'est la page pour de futur 
 ```jsx
 import { useState } from "react"
 
@@ -168,3 +170,5 @@ function MyPage() {
     )
 }
 ```
+
+### Création d'un formulaire (formik, yup)
