@@ -172,6 +172,101 @@ function MyPage() {
 ```
 
 ### Création d'un formulaire (formik, yup)
+Pour faciliter la gestion des erreurs il faut s'aider de 2 librairies ([Formik](), [Yup]()).<br>
+Nous allons détailler un exemple de formulaire de connection avec ces 2 librairies.
+```jsx
+ import React from 'react';
+ import { Formik, Form, Field } from 'formik';
+ import * as Yup from 'yup';
+
+ const SignupSchema = Yup.object().shape({
+   firstName: Yup.string()
+     .min(2, 'Too Short!')
+     .max(50, 'Too Long!')
+     .required('Required'),
+   lastName: Yup.string()
+     .min(2, 'Too Short!')
+     .max(50, 'Too Long!')
+     .required('Required'),
+   email: Yup.string().email('Invalid email').required('Required'),
+ });
+
+ export const ValidationSchemaExample = () => (
+
+   <div>
+     <h1>Signup</h1>
+     <Formik
+       initialValues={{
+         firstName: '',
+         lastName: '',
+         email: '',
+       }}
+       validationSchema={SignupSchema}
+       onSubmit={values => {
+         // same shape as initial values
+         console.log(values);
+       }}
+     >
+       {({ errors, touched }) => (
+         <Form>
+           <Field name="firstName" />
+           {errors.firstName && touched.firstName ? (
+             <div>{errors.firstName}</div>
+           ) : null}
+
+           <Field name="lastName" />
+           {errors.lastName && touched.lastName ? (
+             <div>{errors.lastName}</div>
+           ) : null}
+
+           <Field name="email" type="email" />
+           {errors.email && touched.email ? <div>{errors.email}</div> : null}
+
+           <button type="submit">Submit</button>
+         </Form>
+       )}
+     </Formik>
+   </div>
+ );
+```
+Tous les formulaires devront utiliser cette façon de faire. <br>
+Si vous avez besoin de créer de nouveaux Fields avec Formik, il faut procéder en 2 étapes.
+1. Création du field sans Formik (Il devra gérer les props suivantes *error, helperText, value, onChange*)
+```jsx
+import { TextField } from "@material-ui/core"
+
+function NewTextField({ InputProps, ...props }) {
+  return (
+    <TextField
+      {...props}
+    />
+  )
+}
+
+export default NewTextField
+```
+2. Wrapping du field avec Formik
+```jsx
+import NewTextField from "./NewTextField"
+import { useField } from "formik"
+
+function FormikNewTextField({ helperText, ...props }) {
+  const [field, { error, touched }] = useField(props)
+
+  const hasError = touched && Boolean(error)
+
+  return (
+    <NewTextField
+      {...field}
+      error={hasError}
+      helperText={hasError ? error : helperText}
+      {...props}
+    />
+  )
+}
+
+export default FormikNewTextField
+```
 
 ### Appliquer les règles Eslint/Prettier dans React (Vscode)
 1. Installer l'extension *Prettier Now*
