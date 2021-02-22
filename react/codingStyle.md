@@ -172,3 +172,14 @@ function MyPage() {
 ```
 
 ### Création d'un formulaire (formik, yup)
+
+### Appliquer les règles Eslint/Prettier dans React (Vscode)
+1. Installer l'extension *Prettier Now*
+2. Mettre l'extension par défaut : `ctrl + shift + p` -> *Format document with* -> *Configure Default formatter* -> *Prettier Now*
+3. Installer prettier en tant que formatter par défaut `npm install --save-dev --save-exact prettier`
+4. Mettre en place le formattage automatique par sauvegarde `ctrl + shift + p` -> *Preferences : Open settings (JSON)* -> Ajouter le bout de JSON suivant
+```json
+"editor.codeActionsOnSave": {
+    "source.fixAll": true,
+},
+```
