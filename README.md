@@ -66,5 +66,14 @@ Ressources :
 
 ### VueJs
 Coming soon...
+
 ### React
-- [Coding Style](react/codingStyle.md)
+- [Intro à React](https://fr.reactjs.org/tutorial/tutorial.html)
+- [Bien débuter](https://fr.reactjs.org/docs/getting-started.html)
+- [Coding Style fait maison](react/codingStyle.md)
+- [Framework css - Material UI](https://next--material-ui.netlify.app/)
+
+#### Exercice 1
+Faire l'exo intermédaire mais avec React.
+#### Exercice 2
+Réaliser la maquette Bubble suivante en React : 
