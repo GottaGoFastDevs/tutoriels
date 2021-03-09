@@ -2,6 +2,22 @@
 
 Toi aussi, tu peux devenir un monstre sur Flutter en lisant ce document.
 
+## Structure
+
+### Placer les écrans dans le répertoire `screens`
+
+Chaque écran de l’application doit être représenté par un répertoire portant le nom de cette écran dans le répertoire `screens`.
+
+```
+screens/
+  home/
+    home.dart
+  sign_in/
+    sign_in.dart
+  sign_up/
+    sign_up.dart
+```
+
 ## Gestion d’état
 
 ## Navigation
