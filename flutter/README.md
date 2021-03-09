@@ -30,12 +30,14 @@ Il faut toujours y mettre un `Navigator` et y définir le paramètre `pages`.
 
 ```dart
 MaterialApp(
-  pages: [
-    MaterialPage(
-      key: ValueKey('HomePage'),
-      child: HomeScreen(),
-    ),
-  ],
-  onPopPage: (route, result) => route.didPop(result),
+  home: Navigator(
+    pages: [
+      MaterialPage(
+        key: ValueKey('HomePage'),
+        child: HomeScreen(),
+      ),
+    ],
+    onPopPage: (route, result) => route.didPop(result),
+  ),
 ),
 ```
