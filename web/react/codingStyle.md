@@ -166,6 +166,7 @@ function MyComponent({name, ...props}) {
 ```
 
 ##### Exemple avec une copie immutable
+L'objectif est de voir comment travailler avec des tableaux de manière immutable
 ```jsx
 import { useState } from "react"
 
@@ -222,6 +223,8 @@ function MyOuterComponent() {
 ```
 
 ##### Exemple avec appel asynchrone
+L'objectif est de voir comment créer une fonction asynchrone.
+Sans les mots clés *async* et *await* le code passera aux isntructions suivantes sans attendre la fin de la fonction asynchrone *myAsyncCall*.
 ```jsx
 function MyOuterComponent() {
   // Déclarer des fonctions asynchrones
