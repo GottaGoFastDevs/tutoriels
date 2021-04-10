@@ -119,6 +119,79 @@ views
 ### Components
 Il faut ranger les composants par catégories (par vue, fields, button...).
 
+#### Component functions
+Il y a plusieurs façons d'écrire des composants dans React mais la solution choisi est celle des component functions.
+```jsx
+import { useState } from "react"
+
+// Le composant Movie form est juste un boutton qui ajoute le même film à chaque click sur le boutton
+function MovieForm({onClick}) {
+  // Si la variable n'est pas dynamique, il n'y a pas besoin d'utiliser useState
+  const myMovieName = "Pix'art"
+
+  // Alors normalement on rédéfinit les fonctions des événements à chaque fois, mais dès fois on a la flemme
+  function handleClick() {
+    onClick(myMovieName)
+  }
+
+  return (
+    <button onClick={handleClick}></button>
+  )
+}
+
+// La propriéte ...props permet des récupérer toutes les props qui ne sont pas récupérées comme *name*
+function MyComponent({name, ...props}) {
+  // Déclarer une variable dynamique
+  const [value, setValue] = useState(0)
+  const [movies, setMovies] = useState([])
+  // Déclarer les fonctions qui utilise value
+  function incrementValue() {
+    setValue(value + 1)
+  }
+  function addMovie({name}) {
+    // Passer les données de façon immutable (passer une nouvelle référence) pour que React puisse détecter des changements
+    // Utiliser le mot clé *new* pour les copies
+    // La méthode slice permet de faire une copie du tableau
+    const newMovies = movies.slice()
+    // Travailler avec le nouvel objet 
+    newMovies.push({
+      name
+    })
+    // Sauvegarder les changements
+    setMovie(newMovies)
+  }
+
+  // Déclarer les fonctions qui handle les événements
+  // Toujours utiliser les mots *on" et *handle* pour gérer les événements
+  // Le mot clé *handle* sert à être passer à la props *on* d'un composant
+  function handleValueClick() {
+    incrementeValue()
+  }
+  function handleMovieClick(name) {
+    addMovie({name})
+  }
+
+  // Déclarer des fonctions asynchrones
+  const myAsyncFunction = async () => {
+    await myAsyncCall()
+  }
+
+  return (
+    // Balise vide pour composer plusieurs composants sans changer leur style
+    <>
+      <h1>Vous avez cliqué : {value}<h1/>
+      <button onClick={handleValueClick}>Incrémente moi</button>
+      <MovieForm />
+    </>
+  )
+}
+function MyOuterComponent() {
+  return (
+    <MyComponent name="Louis" isBeautiful={true}>
+  )
+}
+```
+
 ## Autres
 ### Import des composants de Material UI
 ```jsx
@@ -150,15 +223,12 @@ Dans l'exemple ci-dessous, la page est composé de son corps ainsi que d'un bout
 import { useState } from "react"
 
 function IncrementButton({value, onChange}) {
-    function handleChange(newValue) {
-        onChange(newValue)
-    }
-    function incrementValue() {
-        handleChange(value++)
+    function handleClick() {
+        onChange(value++)
     }
 
     return (
-        <Button onClick={incrementValue}>+</Button>
+        <Button onClick={handleClick}>+</Button>
     )
 }
 
