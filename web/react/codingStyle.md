@@ -136,7 +136,7 @@ function MyComponent() {
 
   // Déclarer les fonctions qui handle les événements
   // Toujours utiliser les mots *on" et *handle* pour gérer les événements
-  // Le mot clé *handle* sert à être passer à la props *on* d'un composant
+  // Le préfixe *handle* sert à être passer à la props *on* d'un composant
   function handleValueClick() {
     incrementeValue()
   }
