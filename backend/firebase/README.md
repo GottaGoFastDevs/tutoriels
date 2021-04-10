@@ -1,6 +1,6 @@
 # Firebase
 
 ## Méthodologie
-- [Utiliser firebase dans avec React](react/README.md)
-- [Coding style des fonctions firebase](functions/README.md)
-- [Ecriture de petits scripts pour remplir firestore](scripts/README.md)
+- [Utiliser firebase dans avec React](react)
+- [Coding style des fonctions firebase](functions)
+- [Ecriture de petits scripts pour remplir firestore](scripts)
