@@ -150,7 +150,7 @@ function MyComponent({name, ...props}) {
   }
   function addMovie({name}) {
     // Passer les données de façon immutable (passer une nouvelle référence) pour que React puisse détecter des changements
-    // Utiliser le mot clé *new* pour les copies
+    // Utiliser le préfixe *new* pour noms de variables des copies
     // La méthode slice permet de faire une copie du tableau
     const newMovies = movies.slice()
     // Travailler avec le nouvel objet 
