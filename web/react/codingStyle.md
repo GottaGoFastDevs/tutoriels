@@ -121,6 +121,51 @@ Il faut ranger les composants par catégories (par vue, fields, button...).
 
 #### Component functions
 Il y a plusieurs façons d'écrire des composants dans React mais la solution choisi est celle des component functions.
+##### Exemple simple
+###### Exemple complet
+L'objectif est de voir comment on pourrait améliorer la lisibilité du code quand cette dernière n'est pas bien.
+```jsx
+function MyComponent() {
+  // Déclarer une variable dynamique
+  const [value, setValue] = useState(0)
+
+  // Déclarer les fonctions qui utilise value
+  function incrementValue() {
+    setValue(value + 1)
+  }
+
+  // Déclarer les fonctions qui handle les événements
+  // Toujours utiliser les mots *on" et *handle* pour gérer les événements
+  // Le mot clé *handle* sert à être passer à la props *on* d'un composant
+  function handleValueClick() {
+    incrementeValue()
+  }
+
+  return (
+    // Balise vide pour composer plusieurs composants sans changer leur style
+    <>
+      <h1>Vous avez cliqué : {value}<h1/>
+      <button onClick={handleValueClick}>Incrémente moi</button>
+    </>
+  )
+}
+```
+###### Exemple optimisé
+L'objectif est de voir l'exemple optimité de l'exemple ci-dessus quand la lisibilité le permet
+```jsx
+function MyComponent({name, ...props}) {
+  const [value, setValue] = useState(0)
+
+  return (
+    <>
+      <h1>Vous avez cliqué : {value}<h1/>
+      <button onClick={() => setValue(value + 1)}>Incrémente moi</button>
+    </>
+  )
+}
+```
+
+##### Exemple avec une copie immutable
 ```jsx
 import { useState } from "react"
 
@@ -141,13 +186,9 @@ function MovieForm({onClick}) {
 
 // La propriéte ...props permet des récupérer toutes les props qui ne sont pas récupérées comme *name*
 function MyComponent({name, ...props}) {
-  // Déclarer une variable dynamique
-  const [value, setValue] = useState(0)
+
   const [movies, setMovies] = useState([])
-  // Déclarer les fonctions qui utilise value
-  function incrementValue() {
-    setValue(value + 1)
-  }
+
   function addMovie({name}) {
     // Passer les données de façon immutable (passer une nouvelle référence) pour que React puisse détecter des changements
     // Utiliser le préfixe *new* pour noms de variables des copies
@@ -161,33 +202,35 @@ function MyComponent({name, ...props}) {
     setMovie(newMovies)
   }
 
-  // Déclarer les fonctions qui handle les événements
-  // Toujours utiliser les mots *on" et *handle* pour gérer les événements
-  // Le mot clé *handle* sert à être passer à la props *on* d'un composant
-  function handleValueClick() {
-    incrementeValue()
-  }
   function handleMovieClick(name) {
     addMovie({name})
   }
 
+  return (
+    <>
+      <h1>{title}<h1/>
+      <MovieForm onClick={handleMovieClick}/>
+    </>
+  )
+}
+
+function MyOuterComponent() {
+  return (
+    <MyComponent title="Louis" isBeautiful={true}>
+  )
+}
+```
+
+##### Exemple avec appel asynchrone
+```jsx
+function MyOuterComponent() {
   // Déclarer des fonctions asynchrones
   const myAsyncFunction = async () => {
     await myAsyncCall()
   }
-
+  
   return (
-    // Balise vide pour composer plusieurs composants sans changer leur style
-    <>
-      <h1>Vous avez cliqué : {value}<h1/>
-      <button onClick={handleValueClick}>Incrémente moi</button>
-      <MovieForm />
-    </>
-  )
-}
-function MyOuterComponent() {
-  return (
-    <MyComponent name="Louis" isBeautiful={true}>
+    <MyComponent title="Louis" isBeautiful={true}>
   )
 }
 ```
