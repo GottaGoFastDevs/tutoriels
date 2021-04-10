@@ -3,7 +3,7 @@ Si vous voulez quand même savoir où vous mettez les pieds, consultez les liens
 - [Web Architecture 101](https://engineering.videoblocks.com/web-architecture-101-a3224e126947)
 - [The System Design Primer](https://github.com/donnemartin/system-design-primer)
 
-## Objectif : Réaliser des applications grâce à un framework (React ou Vue)
+## Objectif : Réaliser des applications grâce à un framework (React, Vue ou Svelte)
 
 ### HTML
 Le HTML nous servira à construire le squelette de notre application.<br />
