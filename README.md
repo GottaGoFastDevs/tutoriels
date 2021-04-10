@@ -5,7 +5,7 @@ Si vous voulez quand même savoir où vous mettez les pieds, consultez les liens
 
 ## Objectif : Réaliser des applications grâce à un framework (React, Vue ou Svelte)
 
-- [HTML](html/README.md)
+### [HTML](html/README.md)
 
 ### CSS
 Le CSS nous servira à personnaliser notre squelette html.<br />
