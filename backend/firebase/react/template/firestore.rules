@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Définir les fonctions de base
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function getProfile() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    // Donner les authorisations nécessaires (moindre privilège)
+    match /movies/{movieId} {
+      allow read: if isAuthenticated();
+    }
+}
