@@ -5,18 +5,7 @@ Si vous voulez quand même savoir où vous mettez les pieds, consultez les liens
 
 ## Objectif : Réaliser des applications grâce à un framework (React, Vue ou Svelte)
 
-### HTML
-Le HTML nous servira à construire le squelette de notre application.<br />
-A retenir :
-- [la base](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- La balise `<div>` pour les blocs
-- La balise `<span>` pour le texte
-
-Pour approfondir : 
-- https://developer.mozilla.org/en-US/docs/Web/HTML
-
-Exemples :
-- [html sandbox](https://codesandbox.io/s/ywx8834xrj)
+- [HTML](html/README.md)
 
 ### CSS
 Le CSS nous servira à personnaliser notre squelette html.<br />
