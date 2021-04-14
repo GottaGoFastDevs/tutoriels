@@ -28,7 +28,7 @@ La simplicité est la clé. Nous ne devons pas utiliser trop d’outils. En fait
 Le but de cette méthode agile est de pouvoir être expliquée très rapidement.
 
 1. Une issue par user story, avec un tag `story`.
-2. Si une story a besoin d’être découpées en sous-tâche : une issue par sous-tache, liée à l’issue de l’user story.
+2. Si une story a besoin d’être découpées en sous-tâche : une issue par sous-tâche, liée à l’issue de l’user story.
 3. Une issue par bogue, avec un tag `bug`.
 4. Un projet GitHub.
 5. Une colonne pour le backlog, une colonne par sprint.
@@ -40,15 +40,22 @@ Le but de cette méthode agile est de pouvoir être expliquée très rapidement.
 
 **IL FAUT** mettre en production après chaque sprint.
 
-**IL FAUT** refactoriser après chaque sprint.
+**IL FAUT** refactoriser après chaque sprint, si possible avec quelqu’un de plus compétent.
 
+## Les issues
+
+**IL NE FAUT PAS** utiliser d’abbrévations dans le nom des issues.
+
+**IL FAUT** donner du contexte dans le nom de l’issue.
+
+**IL FAUT** rédiger la description de l’issue en supposant que celui qui va la lire rejoint le projet pour la première fois.
 
 ## Factorisation du code
 
 Quand on remarque une répétition dans un projet, on souhaite factoriser le code pour supprimer cette répétition. Seulement, il faut le faire bien. Parfois, il ne faut pas le faire : la factorisation peut aller contre l’évolutivité du code.
 
-**IL NE FAUT PAS** factoriser pendant le sprint
+**IL NE FAUT PAS** factoriser pendant le sprint.
 
-**IL FAUT** factoriser entre les sprints, pendant la refactorisation
+**IL FAUT** factoriser entre les sprints, pendant la refactorisation.
 
-**IL NE FAUT PAS** décider de comment factoriser seul
+**IL NE FAUT PAS** décider de comment factoriser seul.
