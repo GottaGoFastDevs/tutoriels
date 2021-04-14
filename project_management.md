@@ -41,3 +41,14 @@ Le but de cette méthode agile est de pouvoir être expliquée très rapidement.
 **IL FAUT** mettre en production après chaque sprint.
 
 **IL FAUT** refactoriser après chaque sprint.
+
+
+## Factorisation du code
+
+Quand on remarque une répétition dans un projet, on souhaite factoriser le code pour supprimer cette répétition. Seulement, il faut le faire bien. Parfois, il ne faut pas le faire : la factorisation peut aller contre l’évolutivité du code.
+
+**IL NE FAUT PAS** factoriser pendant le sprint
+
+**IL FAUT** factoriser entre les sprints, pendant la refactorisation
+
+**IL NE FAUT PAS** décider de comment factoriser seul
