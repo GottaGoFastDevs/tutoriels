@@ -26,7 +26,6 @@ function ProfileForm() {
 const profileFormSchema = Yup.object().shape({
   firstname: Yup.string().required(),
   lastname: Yup.string().required(),
-  
 })
 
 function ProfileForm() {
