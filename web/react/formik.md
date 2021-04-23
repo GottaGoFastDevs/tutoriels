@@ -1,3 +1,6 @@
+# Formik
+
+## Sans Formik
 ```jsx
 function ProfileForm() {
 
@@ -21,11 +24,10 @@ function ProfileForm() {
 ```
 
 
-
+## Avec Formik
 ```jsx
 const profileFormSchema = Yup.object().shape({
   firstname: Yup.string().required(),
-  lastname: Yup.string().required(),
 })
 
 function ProfileForm() {
