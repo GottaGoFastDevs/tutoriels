@@ -20,7 +20,15 @@ function ProfileForm() {
 }
 ```
 
+
+
 ```jsx
+const profileFormSchema = Yup.object().shape({
+  firstname: Yup.string().required(),
+  lastname: Yup.string().required(),
+  
+})
+
 function ProfileForm() {
   const user = useUser()
 
@@ -42,7 +50,6 @@ function ProfileForm() {
         <Form>
           <div className="grid gap-4">
             <TextField label="First name" name="firstname" />
-           
             <button className="form-btn">Update your profile</button>
           </div>
         </Form>
