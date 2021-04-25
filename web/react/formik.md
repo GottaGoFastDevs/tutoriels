@@ -15,9 +15,14 @@ function ProfileForm() {
     }
   }
   
+  function handleSubmit() {
+    validateFirstname()
+  }
+  
   return (
     <form>
       <input value={firstname} onChange={(event) => setFirstname(event.target.value)} />
+      <button type="submit" onClick={handleSubmit}>Save</button>
     </form>
   )
 }
